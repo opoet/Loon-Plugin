@@ -1,11 +1,12 @@
 /*
   Author: opoet
   Date: 2023-03-26
-  Description: Emby crack loon script
+  Description: Emby crack script
 */
 
 function crackEmbyVerifyRes(response, res) {
-  response.headers["Content-Type"] = "application/json; charset=utf-8";
+  response.headers["Content-Type"] = "application/json";
+  response.headers["Charset"] = "utf-8";
   response.status = 200;
   response.body = res;
   console.log("Rewrite Emby verify URL response successfully");

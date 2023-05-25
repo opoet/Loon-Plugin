@@ -1,0 +1,20 @@
+name: Emby-crack
+desc: 解锁 emby 会员
+# author: @opoet
+
+http:
+  script:
+    - match: ^https?://mb3admin\.com/.*
+      name: EmbyCrack
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 1048576
+
+  mitm:
+    - "mb3admin.com"
+ 
+script-providers:
+  EmbyCrack:
+    url: https://raw.githubusercontent.com/opoet/proxy-tool-annex/main/plugin/script/emby-crack.js
+    interval: 86400
